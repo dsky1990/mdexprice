@@ -6,15 +6,15 @@ const getKline = '/market/history/kline'
 axios.get(`${api}${getKline}`, {
   params: {
     symbol: 'mdxusdt',
-    period: '5min',
-    size: 288
+    period: '30min',
+    size: 1440
   }
 }).then(res => {
   let total = 0
   res.data.data.forEach(val => {
     total += val.low
   })
-  console.log(total/288)
+  console.log(total/1440)
 }).catch(err => {
   console.log(err)
 })
