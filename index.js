@@ -6,7 +6,7 @@ const getKline = '/market/history/kline'
 axios.get(`${api}${getKline}`, {
   params: {
     symbol: 'mdxusdt',
-    period: '30min',
+    period: '1min',
     size: 1440
   }
 }).then(res => {
